@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Diagnostics.Contracts;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace TPmodul6
 {
@@ -15,8 +11,11 @@ namespace TPmodul6
 
         public SayaTubeVideo(string title)
         {
-            Contract.Requires(title.Length <= 100);
-            Contract.Requires(title.Length > 0); 
+            if (title.Length > 100 || title.Length <= 0)
+            {
+                throw new ArgumentException("Panjang judul harus di antara 1 dan 100 karakter.");
+            }
+
             this.title = title;
             this.playCount = 0;
             Random random = new Random();
@@ -25,9 +24,12 @@ namespace TPmodul6
 
         public void IncreasePlayCount(int angka)
         {
-            Contract.Requires(angka <= 10000000);
-            this.playCount = this.playCount + angka;
+            if (angka > 10000000)
+            {
+                throw new ArgumentException("Error: Masukan melebihi batas maksimum (10.000.000).");
+            }
 
+            this.playCount += angka;
             try
             {
                 checked
@@ -37,16 +39,16 @@ namespace TPmodul6
             }
             catch (OverflowException ex)
             {
-                Console.WriteLine("Error: jumlah penambahan play count tidak melebihi batas tertinggi integer");
-                Console.WriteLine(ex.Message);
+                
             }
         }
+
 
         public void PrintVideoDetails()
         {
             Console.WriteLine(this.id);
-            Console.WriteLine(this.title); 
-            Console.WriteLine(this.playCount);  
+            Console.WriteLine(this.title);
+            Console.WriteLine(this.playCount);
         }
     }
 
@@ -58,7 +60,7 @@ namespace TPmodul6
             Console.WriteLine("Menguji prekondisi:");
             try
             {
-                SayaTubeVideo video1 = new SayaTubeVideo(""); // Melebihi batas minimum panjang judul
+                SayaTubeVideo video1 = new SayaTubeVideo(""); 
             }
             catch (Exception ex)
             {
@@ -67,14 +69,19 @@ namespace TPmodul6
 
             // Menguji exception dengan for loop untuk mempercepat proses overflow
             Console.WriteLine("\nMenguji exception (overflow):");
-            SayaTubeVideo video2 = new SayaTubeVideo("Tutorial Design By Contract – Daffa Fadillah");
-            for (int i = 0; i < 100; i++)
+            SayaTubeVideo video2 = new SayaTubeVideo("Tutorial Design By Contract - Daffa Fadillah");
+            try
             {
-                video2.IncreasePlayCount(1000000); // Menambah play count sebanyak 100 juta (overflow)
+                for (int i = 0; i < 100; i++)
+                {
+                    video2.IncreasePlayCount(i+10000000); 
+                }
             }
-            video2.PrintVideoDetails(); // Menampilkan detail video setelah exception (overflow)
-
-            Console.ReadKey();
+            catch (Exception ex)
+            {
+                Console.WriteLine("masukan melebihi batas ");
+            }
+            video2.PrintVideoDetails(); 
         }
     }
 }
