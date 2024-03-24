@@ -18,21 +18,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 22,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 4,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Class1.cs",
-              "DocumentMoniker": "C:\\Users\\fadillah\\OneDrive - Telkom University\\Dokumen\\My File\\RPL\\SEMESTER 4\\Kontruksi Perangkat Lunak\\TPmodul6\\TPmodul6\\Class1.cs",
-              "RelativeDocumentMoniker": "TPmodul6\\Class1.cs",
-              "ToolTip": "C:\\Users\\fadillah\\OneDrive - Telkom University\\Dokumen\\My File\\RPL\\SEMESTER 4\\Kontruksi Perangkat Lunak\\TPmodul6\\TPmodul6\\Class1.cs",
-              "RelativeToolTip": "TPmodul6\\Class1.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAAAxwA0AAAAAAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T18:14:41.075Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{cce594b6-0c39-4442-ba28-10c64ac7e89f}"
@@ -51,6 +38,19 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Class1.cs",
+              "DocumentMoniker": "C:\\Users\\fadillah\\OneDrive - Telkom University\\Dokumen\\My File\\RPL\\SEMESTER 4\\Kontruksi Perangkat Lunak\\TPmodul6\\TPmodul6\\Class1.cs",
+              "RelativeDocumentMoniker": "TPmodul6\\Class1.cs",
+              "ToolTip": "C:\\Users\\fadillah\\OneDrive - Telkom University\\Dokumen\\My File\\RPL\\SEMESTER 4\\Kontruksi Perangkat Lunak\\TPmodul6\\TPmodul6\\Class1.cs",
+              "RelativeToolTip": "TPmodul6\\Class1.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAATAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-23T18:14:41.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\fadillah\\OneDrive - Telkom University\\Dokumen\\My File\\RPL\\SEMESTER 4\\Kontruksi Perangkat Lunak\\TPmodul6\\TPmodul6\\Program.cs",
@@ -59,8 +59,7 @@
               "RelativeToolTip": "TPmodul6\\Program.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-23T18:08:43.626Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-03-23T18:08:43.626Z"
             }
           ]
         },
